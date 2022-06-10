@@ -1,6 +1,7 @@
 import React from "react";
-import orge from "../img/favicon.ico";
-import "./Header.scss";
+import user from "../img/user.png";
+// import "./Header.scss";
+import "./Header.css";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { API } from "../global/FetchAPI";
@@ -39,7 +40,7 @@ export const Header = () => {
                 </form>
             </section>
             <section className="user-image">
-                <img src={ orge } alt="user" />
+                <img src={ user } alt="user" />
             </section>
         </main>
         </React.Fragment>

@@ -14,12 +14,12 @@
 
 a {
     text-decoration: none;
-    color: var(--main-font); /* $font-primary; */
+    color: var(--main-font);
 }
 
 body {
     background-color: $primary-color;
-    color: var(--main-font); /* $font-primary; */
+    color: var(--main-font);
 }
 
 .container {
