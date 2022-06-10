@@ -1,20 +1,21 @@
 import React from "react";
 import "./MovieDetail.scss";
+import "./Detail.css";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { API } from "../global/FetchAPI";
-import { MovieActions } from "../global/MovieSlice";
+import { FilmActions } from "../global/FilmSlice";
 
 export const MovieDetail = () => {
     const { imdbID } = useParams();
     const dispatch = useDispatch();
     const data = useSelector(
-        (state) => state.movies.selectMovieOrShow);
+        (state) => state.films.getFilmOrShow);
 
     React.useEffect(() => {
-        dispatch(API.fetchMovieOrShow(imdbID));
+        dispatch(API.getFilmOrShow(imdbID));
         return () => {
-            dispatch(MovieActions.removeMOS());
+            dispatch(FilmActions.removeFOS());
         };
     }, [dispatch, imdbID]);
 

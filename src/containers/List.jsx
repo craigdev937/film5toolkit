@@ -1,23 +1,23 @@
 import React from "react";
-import "./MovieListing.scss";
+import "./List.css";
 import Slider from "react-slick";
 import { Settings } from "../global/ReactSlick";
 import { useSelector } from "react-redux";
 import { Card } from "../components/Card";
 
-export const MovieListing = () => {    
-    const movies = useSelector((state) => state.movies.movies);
-    const shows = useSelector((state) => state.movies.shows);
-    let renderMovies, renderShows = "";
+export const List = () => {    
+    const films = useSelector((state) => state.films.films);
+    const shows = useSelector((state) => state.films.shows);
+    let renderFilms, renderShows = "";
     
-    renderMovies = movies.Response === "True" ? 
+    renderFilms = films.Response === "True" ? 
     (
-        movies.Search.map((movie, index) => (
-            <Card key={index} data={movie} />
+        films.Search.map((film, index) => (
+            <Card key={index} data={film} />
         ))
     ) : (
         <aside className="movies-error">
-            <h3>{movies.Error}</h3>
+            <h3>{films.Error}</h3>
         </aside>
     );
 
@@ -41,7 +41,7 @@ export const MovieListing = () => {
                         className="movie-container"
                         >
                             <Slider {...Settings}>
-                                {renderMovies}
+                                {renderFilms}
                             </Slider>
                     </aside>
                 </section>

@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { MovieReducer } from "./MovieSlice";
+import { FilmReducer } from "./FilmSlice";
 
 export const RootReducer = configureStore({
     reducer: {
-        movies: MovieReducer,
+        films: FilmReducer,
     },
 });
 

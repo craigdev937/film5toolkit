@@ -3,8 +3,7 @@ import { APIKey } from "../config/MovieApiKey";
 
 const URL = "https://www.omdbapi.com";
 class FetchClass {
-    fetchAsyncMovies = 
-    createAsyncThunk("movies/fetchAsyncMovies", 
+    getFilms = createAsyncThunk("films/getFilms", 
     async (term) => {
         const res = await fetch(
             `${URL}?apiKey=${APIKey}&s=${term}&type=movie`
@@ -14,8 +13,8 @@ class FetchClass {
         return data;
     });
 
-    fetchAsyncShows = 
-    createAsyncThunk("shows/fetchAsyncShows", 
+    fetchShows = 
+    createAsyncThunk("shows/fetchShows", 
     async (term) => {
         const res = await fetch(
             `${URL}?apiKey=${APIKey}&s=${term}&type=series`
@@ -25,8 +24,8 @@ class FetchClass {
         return data;
     });
 
-    fetchMovieOrShow = 
-    createAsyncThunk("movies/fetchMovieOrShow", 
+    getFilmOrShow = 
+    createAsyncThunk("films/getFilmOrShow", 
     async (id) => {
         const res = await fetch(
             `${URL}?apiKey=${APIKey}&i=${id}&Plot=full`

@@ -1,5 +1,5 @@
 {
-  "name": "sassmovie1",
+  "name": "film5toolkit",
   "version": "1.0.0",
   "description": "",
   "main": "index.jsx",
@@ -8,8 +8,8 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["Vite", "React", "React Router", "Fetch API", "Redux-Toolkit"],
+  "author": "Craig Johnson",
   "license": "ISC",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
