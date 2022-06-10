@@ -1,6 +1,5 @@
 import React from "react";
-import user from "../img/user.png";
-// import "./Header.scss";
+import user from "../img/favicon.ico";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -24,7 +23,7 @@ export const Header = () => {
         <React.Fragment>
         <main className="header">
             <section className="logo">
-                <Link to="/">Movie App</Link>
+                <Link to="/">Films and Shows</Link>
             </section>
             <section className="search-bar">
                 <form onSubmit={handleSubmit}>
