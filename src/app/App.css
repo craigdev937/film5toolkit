@@ -1,0 +1,28 @@
+:root {
+    --primary-bg: #0f171e;
+    --secondary-bg: #1a242f;
+    --main-font: #fff;
+    --secondary-font: #79b8f3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "open Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-font); /* $font-primary; */
+}
+
+body {
+    background-color: $primary-color;
+    color: var(--main-font); /* $font-primary; */
+}
+
+.container {
+    margin: 0px 40px;
+}
+
