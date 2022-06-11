@@ -15,8 +15,8 @@ export const Header = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        dispatch(API.fetchAsyncMovies(term));
-        dispatch(API.fetchAsyncShows(term));
+        dispatch(API.getFilms(term));
+        dispatch(API.fetchShows(term));
     };
 
     return (
