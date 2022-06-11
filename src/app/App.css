@@ -1,6 +1,8 @@
 :root {
-    --primary-bg: #0f171e;
-    --secondary-bg: #1a242f;
+    /* --primary-bg: #0f171e; */
+    --primary-bg: #2c4153;
+    /* --secondary-bg: #1a242f; */
+    --secondary-bg: #091a2c;
     --main-font: #fff;
     --secondary-font: #79b8f3;
 }
@@ -18,7 +20,7 @@ a {
 }
 
 body {
-    background-color: $primary-color;
+    background-color: var(--primary-bg);
     color: var(--main-font);
 }
 

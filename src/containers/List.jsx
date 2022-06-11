@@ -34,22 +34,18 @@ export const List = () => {
 
     return (
         <React.Fragment>
-            <main className="movie-wrapper">
-                <section className="movie-list">
+            <main>
+                <section className="film__list">
                     <h2>Movies</h2>
-                    <aside 
-                        className="movie-container"
-                        >
+                    <aside>
                             <Slider {...Settings}>
                                 {renderFilms}
                             </Slider>
                     </aside>
                 </section>
-                <section className="show-list">
+                <section className="show__list">
                     <h2>TV Shows</h2>
-                    <aside 
-                        className="movie-container"
-                        >
+                    <aside>
                             <Slider {...Settings}>
                                 {renderShows}
                             </Slider>

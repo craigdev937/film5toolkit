@@ -1,5 +1,4 @@
 import React from "react";
-import "./MovieDetail.scss";
 import "./Detail.css";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -26,10 +25,10 @@ export const Detail = () => {
             ) : (
                 <React.Fragment>
                 <section>
-                    <aside className="movie-title">
+                    <aside className="film__title">
                         {data.Title}
                     </aside>
-                    <aside className="movie-rating">
+                    <aside className="film__rating">
                         <span>IMDB Rating 
                             <i className="fa fa-star"> : {data.imdbRating}</i>
                         </span>
@@ -43,8 +42,8 @@ export const Detail = () => {
                             <i className="fa fa-calendar"> : {data.Year}</i>
                         </span>
                     </aside>
-                    <aside className="movie-plot">{data.Plot}</aside>
-                    <aside className="movie-info">
+                    <aside className="film__plot">{data.Plot}</aside>
+                    <aside className="film__info">
                         <div>
                             <span>Director</span>
                             <span>{data.Director}</span>
@@ -67,7 +66,7 @@ export const Detail = () => {
                         </div>
                     </aside>
                 </section>
-                <section className="section-right">
+                <section className="film__right">
                     <img src={data.Poster} alt={data.Title} />
                 </section>
             </React.Fragment>

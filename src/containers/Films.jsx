@@ -5,8 +5,8 @@ import { API } from "../global/FetchAPI";
 
 export const Films = () => {
     const dispatch = useDispatch();
-    const filmText = "Star Trek";
-    const showText = "Blacklist";
+    const filmText = "Hunger Games";
+    const showText = "Star Trek";
 
     React.useEffect(() => {
         dispatch(API.getFilms(filmText));
