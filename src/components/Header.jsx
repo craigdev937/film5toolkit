@@ -7,16 +7,16 @@ import { API } from "../global/FetchAPI";
 
 export const Header = () => {
     const dispatch = useDispatch();
-    const [term, setTerm] = React.useState("");
+    const [query, setQuery] = React.useState("");
 
     const handleChange = (event) => {
-        setTerm(event.target.value);
+        setQuery(event.target.value);
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        dispatch(API.getFilms(term));
-        dispatch(API.fetchShows(term));
+        dispatch(API.getFilms(query));
+        dispatch(API.fetchShows(query));
     };
 
     return (
@@ -29,7 +29,7 @@ export const Header = () => {
                 <form onSubmit={handleSubmit}>
                     <input 
                         type="text" 
-                        value={term} 
+                        value={query} 
                         placeholder="Search Movies or Shows" 
                         onChange={handleChange}
                     />

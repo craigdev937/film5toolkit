@@ -4,9 +4,9 @@ import { APIKey } from "../config/MovieApiKey";
 const URL = "https://www.omdbapi.com";
 class FetchClass {
     getFilms = createAsyncThunk("films/getFilms", 
-    async (term) => {
+    async (query) => {
         const res = await fetch(
-            `${URL}?apiKey=${APIKey}&s=${term}&type=movie`
+            `${URL}?apiKey=${APIKey}&s=${query}&type=movie`
         );
         if (!res.ok) throw new Error(res.statusText);
         const data = await res.json();
@@ -15,9 +15,9 @@ class FetchClass {
 
     fetchShows = 
     createAsyncThunk("shows/fetchShows", 
-    async (term) => {
+    async (query) => {
         const res = await fetch(
-            `${URL}?apiKey=${APIKey}&s=${term}&type=series`
+            `${URL}?apiKey=${APIKey}&s=${query}&type=series`
         );
         if (!res.ok) throw new Error(res.statusText);
         const data = await res.json();
