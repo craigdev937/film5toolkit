@@ -6,11 +6,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { API } from "../global/FetchAPI";
 import { FilmActions } from "../global/FilmSlice";
 
-export const MovieDetail = () => {
+export const Detail = () => {
     const { imdbID } = useParams();
     const dispatch = useDispatch();
     const data = useSelector(
-        (state) => state.films.getFilmOrShow);
+        (state) => state.films.filmOrShow);
 
     React.useEffect(() => {
         dispatch(API.getFilmOrShow(imdbID));
@@ -20,12 +20,12 @@ export const MovieDetail = () => {
     }, [dispatch, imdbID]);
 
     return (
-        <main className="movie-section">
+        <main className="film">
             {Object.keys(data).length === 0 ? (
                 <section>...Loading</section>
             ) : (
                 <React.Fragment>
-                <section className="section-left">
+                <section>
                     <aside className="movie-title">
                         {data.Title}
                     </aside>

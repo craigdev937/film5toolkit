@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const Card = (props) => {
     return (
         <main className="card">
-            <Link to={`/movie/${props.data.imdbID}`}>
+            <Link to={`/film/${props.data.imdbID}`}>
                 <aside className="card__top">
                     <img 
                         src={props.data.Poster} 
